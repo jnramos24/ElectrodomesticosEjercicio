@@ -13,7 +13,7 @@ public class Electrodomestico implements IPrecioCalculable {
 
     protected final String[] COLOR = { "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS" };
     protected final int PESO_POR_DEFECTO = 5; // Kg
-    protected final int PRECIO_POR_DEFECTO =100;
+    protected final int PRECIO_POR_DEFECTO = 100;
     protected final char[] CLASIFICACION_CONSUMO = { 'A', 'B', 'C', 'D', 'E', 'F' };
 
     // ========== ATRIBUTOS HEREDABLES==========
@@ -30,7 +30,7 @@ public class Electrodomestico implements IPrecioCalculable {
     public Electrodomestico() {
         this.color = COLOR[0];
         this.consumoElectrico = CLASIFICACION_CONSUMO[5];
-        this.precio = precioFinal(PRECIO_POR_DEFECTO);
+        this.precio = PRECIO_POR_DEFECTO;
         this.peso = PESO_POR_DEFECTO;
     }
 
@@ -42,7 +42,7 @@ public class Electrodomestico implements IPrecioCalculable {
      */
     public Electrodomestico(int precio, int peso) {
         this();
-        this.precio = precioFinal(precio);
+        this.precio = precio;
         this.peso = peso;
     }
 
@@ -175,6 +175,20 @@ public class Electrodomestico implements IPrecioCalculable {
         this.peso = peso;
     }
 
+    // ========== TO STRING ==========
+
+    /**
+     * Muestra de manera formateada las caracterisitcas del Electrodomestico
+     * 
+     * @param String formateado
+     */
+    @Override
+    public String toString() {
+        
+        return String.format("%-18s %-7s %2s %5d %5d", "Electrodomestico", getColor(), getConsumoElectrico(), getPeso(),
+                precioFinal());
+    }
+
     // =========== METODOS ===========
 
     /**
@@ -186,7 +200,7 @@ public class Electrodomestico implements IPrecioCalculable {
      */
     private char comprobarConsumoEnergetico(char letra) {
         for (char c : CLASIFICACION_CONSUMO) {
-            if(letra == c)
+            if (letra == c)
                 return letra;
         }
         return CLASIFICACION_CONSUMO[5];
@@ -200,7 +214,7 @@ public class Electrodomestico implements IPrecioCalculable {
      */
     private String comprobarColor(String color) {
         for (String s : COLOR) {
-            if(s.equals(color))
+            if (s.equals(color))
                 return color;
         }
         return COLOR[0];
@@ -228,7 +242,7 @@ public class Electrodomestico implements IPrecioCalculable {
      * @return el precio final segun las condiciones
      */
     @Override
-    public int precioFinal(int precioBase) {
+    public int precioFinal() {
         int precioConsumo = 0;
         int precioTamano = 0;
 
@@ -255,7 +269,7 @@ public class Electrodomestico implements IPrecioCalculable {
         else if (peso >= 80)
             precioTamano = 100;
 
-        return precioBase + precioConsumo + precioTamano;
+        return precio + precioConsumo + precioTamano;
     }
 
 }

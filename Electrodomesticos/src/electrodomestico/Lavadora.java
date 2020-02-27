@@ -22,6 +22,20 @@ public class Lavadora extends Electrodomestico {
     public int getCarga() {
         return carga;
     }
+    
+    // ========== TO STRING ==========
+    
+    /**
+     * Muestra de manera formateada las caracterisitcas de la Lavadora
+     * 
+     * @param String formateado
+     */
+    @Override
+    public String toString() {
+        
+        return String.format("%-18s %-7s %2s %5d %5d %5d", "Lavadora", getColor(), getConsumoElectrico(), getPeso(),
+                getCarga(), precioFinal());
+    }
 
     // ========== CONSTRUCTORES ===========
     
@@ -71,12 +85,12 @@ public class Lavadora extends Electrodomestico {
      *         corresponda la condicion
      */
     @Override
-    public int precioFinal(int precioBase) {
+    public int precioFinal() {
 
         if (carga > 30)
-            return super.precioFinal(precioBase) + 50;
+            return super.precioFinal() + 50;
         else
-            return super.precioFinal(precioBase);
+            return super.precioFinal();
     }
 
 }

@@ -19,26 +19,6 @@ public class Televisor extends Electrodomestico {
     private float resolucion; // pulgadas
     private boolean sintonizadorTDT; // Si incluye TDT: Televisión Digital Terrestre
 
-    // ========== GET IS ==========
-
-    /**
-     * Get resolucion
-     * 
-     * @return the resolucion
-     */
-    public float getResolucion() {
-        return resolucion;
-    }
-
-    /**
-     * Is sintonizadorTDT
-     * 
-     * @return the sintonizadorTDT
-     */
-    public boolean isSintonizadorTDT() {
-        return sintonizadorTDT;
-    }
-
     // ========== CONSTRUCTORES ==========
 
     /**
@@ -81,6 +61,40 @@ public class Televisor extends Electrodomestico {
         this.resolucion = resolucion;
         this.sintonizadorTDT = sintonizadorTDT;
     }
+    
+    // ========== GET IS ==========
+
+    /**
+     * Get resolucion
+     * 
+     * @return the resolucion
+     */
+    public float getResolucion() {
+        return resolucion;
+    }
+
+    /**
+     * Is sintonizadorTDT
+     * 
+     * @return the sintonizadorTDT
+     */
+    public boolean isSintonizadorTDT() {
+        return sintonizadorTDT;
+    }
+
+    // ========== TO STRING ==========
+
+    /**
+     * Muestra de manera formateada las caracterisitcas del Televisor
+     * 
+     * @param String formateado
+     */
+    @Override
+    public String toString() {
+
+        return String.format("%-18s %-7s %2s %5d %4f %6b %5d", "Televisor", getColor(), getConsumoElectrico(), getPeso(),
+                getResolucion(), isSintonizadorTDT(), precioFinal());
+    }
 
     // ========== METODO IMPLEMENTADO ==========
 
@@ -92,18 +106,18 @@ public class Televisor extends Electrodomestico {
      *                   condiciones.
      */
     @Override
-    public int precioFinal(int precioBase) {
+    public int precioFinal() {
 
         if (sintonizadorTDT) {
             if (resolucion > 40)
-                return Math.round((super.precioFinal(precioBase) * 1.30f)) + 50;
+                return Math.round((super.precioFinal() * 1.30f)) + 50;
             else
-                return super.precioFinal(precioBase) + 50;
+                return super.precioFinal() + 50;
         } else {
             if (resolucion > 40)
-                return Math.round((super.precioFinal(precioBase) * 1.30f));
+                return Math.round((super.precioFinal() * 1.30f));
             else
-                return super.precioFinal(precioBase);
+                return super.precioFinal();
 
         }
     }
