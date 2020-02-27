@@ -25,7 +25,7 @@ public class Electrodomestico implements IPrecioCalculable {
     // ========== CONSTRUCTORES ==========
 
     /**
-     * Constructor por defecto
+     * Constructor con valores por defectoConstructor por defecto
      */
     public Electrodomestico() {
         this.color = COLOR[0];

@@ -23,7 +23,7 @@ public class Lavadora extends Electrodomestico {
         return carga;
     }
 
-    // ========== CONSTRUCTOR ===========
+    // ========== CONSTRUCTORES ===========
     
     /**
      * Constructor con valores por defecto
