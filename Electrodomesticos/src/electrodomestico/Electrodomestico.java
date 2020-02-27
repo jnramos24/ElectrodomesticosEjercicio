@@ -1,5 +1,12 @@
+/**
+ * Superclase Electrodomestico que implementa IPrecioCalculable
+ */
 package electrodomestico;
 
+/**
+ * @author toballatorre
+ *
+ */
 public class Electrodomestico implements IPrecioCalculable {
 
     // ========== CONSTANTES ==========
@@ -199,6 +206,8 @@ public class Electrodomestico implements IPrecioCalculable {
         return COLOR[0];
     }
 
+    // ========== METODO IMPLEMENTADO ==========
+    
     /**
      * Según el consumo energético, aumentara su precio, y según su tamaño también.
      * ETRA     PRECIO
@@ -214,7 +223,9 @@ public class Electrodomestico implements IPrecioCalculable {
      * Entre 20 y 49 kg         50 €
      * Entre 50 y 79 kg         80 € 
      * Mayor que 80 kg          100 € 
- 
+     * 
+     * @param el precio base para calcular el precio final
+     * @return el precio final segun las condiciones
      */
     @Override
     public int precioFinal(int precioBase) {
