@@ -33,7 +33,7 @@ public class Lavadora extends Electrodomestico {
     @Override
     public String toString() {
         
-        return String.format("%-18s %-7s %2s %5d %5d %5d", "Lavadora", getColor(), getConsumoElectrico(), getPeso(),
+        return String.format("%-18s %-7s %12s %5dkg %6dkg €%d", "Lavadora", getColor(), getConsumoElectrico(), getPeso(),
                 getCarga(), precioFinal());
     }
 

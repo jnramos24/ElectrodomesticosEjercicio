@@ -185,7 +185,7 @@ public class Electrodomestico implements IPrecioCalculable {
     @Override
     public String toString() {
         
-        return String.format("%-18s %-7s %2s %5d %5d", "Electrodomestico", getColor(), getConsumoElectrico(), getPeso(),
+        return String.format("%-18s %-7s %12s %5d €%d", "Electrodomestico", getColor(), getConsumoElectrico(), getPeso(),
                 precioFinal());
     }
 

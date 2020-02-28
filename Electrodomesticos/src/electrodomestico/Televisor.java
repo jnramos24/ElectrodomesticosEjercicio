@@ -11,12 +11,12 @@ public class Televisor extends Electrodomestico {
 
     // ========== CONSTANTES ==========
 
-    protected final float RESOLUCION_POR_DEFECTO = 20f; // pulgadas
+    protected final int RESOLUCION_POR_DEFECTO = 20; // pulgadas
     protected final boolean SINTONIZADOR_POR_DEFECTO = false;
 
     // ========== ATRIBUTOS ==========
 
-    private float resolucion; // pulgadas
+    private int resolucion; // pulgadas
     private boolean sintonizadorTDT; // Si incluye TDT: Televisión Digital Terrestre
 
     // ========== CONSTRUCTORES ==========
@@ -55,7 +55,7 @@ public class Televisor extends Electrodomestico {
      * @param resolucion       pulgadas
      * @param sintonizadorTDT  true o false
      */
-    public Televisor(int precio, int peso, String color, char consumoElectrico, float resolucion,
+    public Televisor(int precio, int peso, String color, char consumoElectrico, int resolucion,
             boolean sintonizadorTDT) {
         super(precio, peso, color, consumoElectrico);
         this.resolucion = resolucion;
@@ -69,7 +69,7 @@ public class Televisor extends Electrodomestico {
      * 
      * @return the resolucion
      */
-    public float getResolucion() {
+    public int getResolucion() {
         return resolucion;
     }
 
@@ -92,8 +92,9 @@ public class Televisor extends Electrodomestico {
     @Override
     public String toString() {
 
-        return String.format("%-18s %-7s %2s %5d %4f %6b %5d", "Televisor", getColor(), getConsumoElectrico(), getPeso(),
+        return String.format("%-18s %-7s %12s %5dkg %9d'' %6b €%d", "Televisor", getColor(), getConsumoElectrico(), getPeso(),
                 getResolucion(), isSintonizadorTDT(), precioFinal());
+       
     }
 
     // ========== METODO IMPLEMENTADO ==========
