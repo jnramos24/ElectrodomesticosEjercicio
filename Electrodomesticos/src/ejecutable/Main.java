@@ -25,7 +25,7 @@ public class Main {
     
     public static void main(String[] args) {
 
-        IPrecioCalculable[] electrodomesticos = crearLista();
+        Electrodomestico[] electrodomesticos = crearLista();
         
         mostrarPreciosFinales(electrodomesticos);
         
@@ -38,9 +38,9 @@ public class Main {
      * 
      * @return la lista creada con los datos.
      */
-    public static IPrecioCalculable[] crearLista() {
+    public static Electrodomestico[] crearLista() {
         
-        IPrecioCalculable[] lista = new IPrecioCalculable[10];
+        Electrodomestico[] lista = new Electrodomestico[10];
         
         lista[0] = new Electrodomestico();
         lista[1] = new Lavadora();
@@ -61,13 +61,13 @@ public class Main {
      * 
      * @param lista se ingresa la lista de electrodomesticos que se desea calcular
      */
-    public static void mostrarPreciosFinales(IPrecioCalculable[] lista) {
+    public static void mostrarPreciosFinales(Electrodomestico[] lista) {
         
         int precioFinalElectrodomesticos = 0;
         int precioFinalLavadoras = 0;
         int precioFinalTelevisores = 0;
         
-        for (IPrecioCalculable e : lista) {
+        for (Electrodomestico e : lista) {
             
             if (e instanceof Televisor)
                 precioFinalTelevisores += e.precioFinal();
@@ -88,22 +88,22 @@ public class Main {
      * 
      * @param lista
      */
-    public static void mostrarElectrodomesticos(IPrecioCalculable[] lista) {
+    public static void mostrarElectrodomesticos(Electrodomestico[] lista) {
         
         System.out.println(String.format("%-18s %-7s %-13s %-8s %-8s %s", "TIPO", "COLOR", "TIPO CONSUMO", "PESO", "CARGA", "PRECIO FINAL"));
-        for (IPrecioCalculable e : lista) {
+        for (Electrodomestico e : lista) {
             if (e instanceof Lavadora)
                 System.out.println(e.toString());
         }
         System.out.println("");
         System.out.println(String.format("%-18s %-7s %-13s %-6s %-11s %-6s %s", "TIPO", "COLOR", "TIPO CONSUMO", "PESO", "RESOLUCION", "TDT", "PRECIO FINAL"));
-        for (IPrecioCalculable e : lista) {
+        for (Electrodomestico e : lista) {
             if (e instanceof Televisor)
                 System.out.println(e.toString());
         }
         System.out.println("");
         System.out.println(String.format("%-18s %-7s %-13s %-6s %s", "TIPO", "COLOR", "TIPO CONSUMO", "PESO", "PRECIO FINAL"));
-        for (IPrecioCalculable e : lista) {
+        for (Electrodomestico e : lista) {
             if (!(e instanceof Lavadora || e instanceof Televisor))
                 System.out.println(e.toString());
         }

@@ -7,7 +7,7 @@ package electrodomestico;
  * @author toballatorre
  *
  */
-public class Electrodomestico implements IPrecioCalculable {
+public class Electrodomestico{
 
     // ========== CONSTANTES ==========
 
@@ -241,7 +241,6 @@ public class Electrodomestico implements IPrecioCalculable {
      * @param el precio base para calcular el precio final
      * @return el precio final segun las condiciones
      */
-    @Override
     public int precioFinal() {
         int precioConsumo = 0;
         int precioTamano = 0;
