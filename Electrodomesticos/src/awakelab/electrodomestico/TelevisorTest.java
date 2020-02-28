@@ -15,8 +15,20 @@ class TelevisorTest {
 
     @Test
     void testPrecioFinal() {
-        int precioFinal = televisor.precioFinal();
+        Televisor[] televisores = new Televisor[3];
+        
+        televisores[0] = new Televisor();
+        televisores[1] = new Televisor(190, 80);
+        televisores[2] = new Televisor(180, 20, "NEGRO", 'C', 33, true);
+        
+        int precioFinal = televisores[0].precioFinal();
         assertEquals(120, precioFinal);
+        
+        precioFinal = televisores[1].precioFinal();
+        assertEquals(300, precioFinal);
+        
+        precioFinal = televisores[2].precioFinal();
+        assertEquals(340, precioFinal);
     }
 
     @Test
