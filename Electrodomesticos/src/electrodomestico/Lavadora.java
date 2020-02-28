@@ -28,7 +28,6 @@ public class Lavadora extends Electrodomestico {
     /**
      * Muestra de manera formateada las caracterisitcas de la Lavadora
      * 
-     * @param String formateado
      */
     @Override
     public String toString() {
@@ -80,7 +79,6 @@ public class Lavadora extends Electrodomestico {
      * Si tiene una carga mayor de 30 kg, aumentara el precio 50 €, sino es así no
      * se incrementara el precio
      * 
-     * @param el precio base para calcular el precio final
      * @return el precio final de la super clase con la adicion de precio segun
      *         corresponda la condicion
      */

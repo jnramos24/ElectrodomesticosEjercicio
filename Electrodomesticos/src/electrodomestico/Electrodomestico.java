@@ -180,7 +180,6 @@ public class Electrodomestico{
     /**
      * Muestra de manera formateada las caracterisitcas del Electrodomestico
      * 
-     * @param String formateado
      */
     @Override
     public String toString() {
@@ -238,7 +237,6 @@ public class Electrodomestico{
      * Entre 50 y 79 kg         80 € 
      * Mayor que 80 kg          100 € 
      * 
-     * @param el precio base para calcular el precio final
      * @return el precio final segun las condiciones
      */
     public int precioFinal() {

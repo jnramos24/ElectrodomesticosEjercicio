@@ -27,9 +27,11 @@ public class Main {
 
         Electrodomestico[] electrodomesticos = crearLista();
         
+        mostrarElectrodomesticos(electrodomesticos);
+       
+        System.out.println("");
         mostrarPreciosFinales(electrodomesticos);
         
-        mostrarElectrodomesticos(electrodomesticos);
 
     }
     
@@ -80,7 +82,6 @@ public class Main {
         System.out.printf(String.format("%-32s %d %n", "Precio Final Lavadora", precioFinalLavadoras));
         System.out.printf(String.format("%-32s %d %n", "Precio Final Televisor", precioFinalTelevisores));
         System.out.printf(String.format("%-32s %d %n", "Precio Final Electrodomesticos", precioFinalElectrodomesticos));
-        System.out.println("");
     }
 
     /**

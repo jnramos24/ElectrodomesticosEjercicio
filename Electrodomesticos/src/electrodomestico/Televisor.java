@@ -87,7 +87,6 @@ public class Televisor extends Electrodomestico {
     /**
      * Muestra de manera formateada las caracterisitcas del Televisor
      * 
-     * @param String formateado
      */
     @Override
     public String toString() {
@@ -103,8 +102,7 @@ public class Televisor extends Electrodomestico {
      * Si tiene una resolución mayor de 40 pulgadas, se incrementara el precio un
      * 30% y si tiene un sintonizador TDT incorporado, aumentara 50 €.
      * 
-     * @param precioBase precio ingresado para calcular el valor final segun las
-     *                   condiciones.
+     * 
      */
     @Override
     public int precioFinal() {
