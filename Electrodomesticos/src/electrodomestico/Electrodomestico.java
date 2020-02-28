@@ -9,7 +9,7 @@ package electrodomestico;
  */
 public class Electrodomestico{
 
-    // ========== CONSTANTES ==========
+ // ========== CONSTANTES ==========
 
     protected final String[] COLOR = { "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS" };
     protected final int PESO_POR_DEFECTO = 5; // Kg

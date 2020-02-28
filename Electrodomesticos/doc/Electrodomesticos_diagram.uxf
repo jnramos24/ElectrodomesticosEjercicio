@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>205</x>
+      <y>95</y>
+      <w>305</w>
+      <h>275</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Super Clase&gt;&gt;
+Electrodomestico
+--
+#final COLOR: String["BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS"]
+#final PESO_POR_DEFECTO: int = 5
+#final PRECIO_POR_DEFECTO: int = 100;
+#final CLASIFICACION_CONSUMO: cha['A', 'B', 'C', 'D', 'E', 'F']
+
+-precio: int
+-color: String
+-consumoElectrico: char
+-peso: int
+--
++Electrodomestico()
++Electrodomestico(int precio, int peso)
++Electrodomestico(int precio, int peso, String color, char consumoElectrico)
+    
++getCOLOR(): String[] 
++getPRECIO_POR_DEFECTO(): int 
++getPESO_POR_DEFECTO(): int 
++getCLASIFICACION_CONSUMO(): char[] 
++getPrecio(): int 
++setPrecio(int precio): void 
++getColor(): String 
++setColor(String color): void 
++getConsumoElectrico(): char 
++setConsumoElectrico(char consumoElectrico): void 
++getPeso(): int 
++setPeso(int peso) void 
+    
+@Override
++String toString
+    
+-comprobarConsumoEnergetico(char letra): char 
++precioFinal():int </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>375</x>
+      <y>430</y>
+      <w>245</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>Lavadora
+--
+#final CARGA_POR_DEFECTO: int = 5
+
+#carga: int
+--
++getCarga: int
+
+@Override
++toString(): String
+
++Lavadora()
++Lavadora(int precio, int peso) 
++Lavadora(int precio, int peso, String color, char consumoElectrico, int carga)
+
+@Override
++precioFinal(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>430</y>
+      <w>345</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>Televisor
+--
+#final RESOLUCION_POR_DEFECTO: int = 20
+#final SINTONIZADOR_POR_DEFECTO: boolean = false
+
+-resolucion: int
+-sintonizadorTDT: boolean
+
++Televisor()
++Televisor(int precio, int peso)
++Televisor(int precio, int peso, String color, char consumoElectrico, int resolucion, boolean sintonizadorTDT)
+
++getResolucion(): int 
++isSintonizadorTDT(): boolean
+    
+@Override
++toString(): String
+    
+@Override
++precioFinal(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>585</x>
+      <y>170</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Clase Ejecutable&gt;&gt;
+Main
+--
++static Electrodomestico[] crearLista()
++static mostrarPreciosFinales(Electrodomestico[]): void
++static mostrarElectrodomesticos(Electrodomestico[]): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>355</x>
+      <y>365</y>
+      <w>155</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;290.0;70.0;290.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>395</y>
+      <w>200</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>505</x>
+      <y>185</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+</diagram>
