@@ -61,3 +61,7 @@
 
 Por ejemplo, si tenemos un Electrodoméstico con un precio final de 300, una lavadora de 200 y una televisión de 500, el resultado final será de 1000 (300+200+500) para electrodomésticos, 200 para lavadora y 500 para televisión.
 
+## Solucion propuesta representado en duagrama UML
+![Diagrama de la solucuion](https://github.com/toballatorre/Awakelab0026_Electrodomesticos/blob/master/Electrodomesticos/doc/Electrodomesticos_diagram.png)
+### Descripcion general
+Las clases hijas de Electrodomestico sobreescriben (Override) el metodo **precioFinal()** y dentro de sus metodos llaman el metodo **precioFinal()** de la Super Clase para modificar el precio final de cada clase
