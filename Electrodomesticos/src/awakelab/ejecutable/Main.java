@@ -13,9 +13,9 @@
  *      Lavadora también son electrodomésticos).
  *      Recuerda el uso operador instanceof.  
  */
-package ejecutable;
+package awakelab.ejecutable;
 
-import electrodomestico.*;
+import awakelab.electrodomestico.*;
 
 /**
  * @author toballatorre

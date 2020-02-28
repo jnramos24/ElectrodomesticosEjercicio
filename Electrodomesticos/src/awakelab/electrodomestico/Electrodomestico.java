@@ -1,7 +1,7 @@
 /**
  * Superclase Electrodomestico que implementa IPrecioCalculable
  */
-package electrodomestico;
+package awakelab.electrodomestico;
 
 /**
  * @author toballatorre

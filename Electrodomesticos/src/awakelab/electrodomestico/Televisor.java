@@ -1,7 +1,7 @@
 /**
  * Clase Lavadora, hija de Superclase Electrodomestico
  */
-package electrodomestico;
+package awakelab.electrodomestico;
 
 /**
  * @author toballatorre
