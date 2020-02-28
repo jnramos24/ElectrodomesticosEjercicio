@@ -64,4 +64,6 @@ Por ejemplo, si tenemos un Electrodoméstico con un precio final de 300, una lav
 ## Solucion propuesta representado en duagrama UML
 ![Diagrama de la solucuion](https://github.com/toballatorre/Awakelab0026_Electrodomesticos/blob/master/Electrodomesticos/doc/Electrodomesticos_diagram.png)
 ### Descripcion general
-Las clases hijas de Electrodomestico sobreescriben (Override) el metodo **precioFinal()** y dentro de sus metodos llaman el metodo **precioFinal()** de la Super Clase para modificar el precio final de cada clase
+[x]Las clases hijas de Electrodomestico sobreescriben (Override) el metodo **precioFinal()** para hacer el calculo de manera individual segun sus necesidades. Dentro del metodo de las clases hijas, llaman a **precioFinal()** de la super clases para adicionar segun las condiciones de Televisor y Lavadora.
+[x]Se realizaron pruebas unitarias solo a las clases contenidas en el paquete **awakelab.electrodomestico**.
+[x]Se crea una clase **void main** para ejeutar lo solicitado en el enunciado.
