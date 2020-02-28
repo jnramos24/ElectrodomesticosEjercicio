@@ -16,21 +16,21 @@ class LavadoraTest {
     @Test
     void testPrecioFinal() {
         Lavadora[] lavadoras = new Lavadora[4];
-        
+
         lavadoras[0] = new Lavadora();
         lavadoras[1] = new Lavadora(190, 80);
         lavadoras[2] = new Lavadora(180, 20, "GRIS", 'A', 10);
         lavadoras[3] = new Lavadora(90, 90, "MORADO", 'G', 8);
-        
+
         int precioFinal = lavadoras[0].precioFinal();
         assertEquals(120, precioFinal);
-        
+
         precioFinal = lavadoras[1].precioFinal();
         assertEquals(300, precioFinal);
-        
+
         precioFinal = lavadoras[2].precioFinal();
         assertEquals(330, precioFinal);
-        
+
         precioFinal = lavadoras[3].precioFinal();
         assertEquals(200, precioFinal);
     }
@@ -47,9 +47,9 @@ class LavadoraTest {
 
     @Test
     void testSetPrecio() {
-       int precio = 34;
-       lavadora.setPrecio(precio);
-       assertEquals(precio, lavadora.getPrecio());
+        int precio = 34;
+        lavadora.setPrecio(precio);
+        assertEquals(precio, lavadora.getPrecio());
     }
 
     @Test

@@ -7,9 +7,9 @@ package awakelab.electrodomestico;
  * @author toballatorre
  *
  */
-public class Electrodomestico{
+public class Electrodomestico {
 
- // ========== CONSTANTES ==========
+    // ========== CONSTANTES ==========
 
     protected final String[] COLOR = { "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS" };
     protected final int PESO_POR_DEFECTO = 5; // Kg
@@ -183,9 +183,9 @@ public class Electrodomestico{
      */
     @Override
     public String toString() {
-        
-        return String.format("%-18s %-7s %12s %5d €%d", "Electrodomestico", getColor(), getConsumoElectrico(), getPeso(),
-                precioFinal());
+
+        return String.format("%-18s %-7s %12s %5d €%d", "Electrodomestico", getColor(), getConsumoElectrico(),
+                getPeso(), precioFinal());
     }
 
     // =========== METODOS ===========

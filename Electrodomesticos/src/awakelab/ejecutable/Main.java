@@ -23,16 +23,15 @@ import awakelab.ejecutable.UtilidadesMain;
  *
  */
 public class Main {
-    
+
     public static void main(String[] args) {
 
         Electrodomestico[] electrodomesticos = UtilidadesMain.crearLista();
-        
+
         UtilidadesMain.mostrarElectrodomesticos(electrodomesticos);
-       
+
         System.out.println("");
         UtilidadesMain.mostrarPreciosFinales(electrodomesticos);
-        
 
     }
 }

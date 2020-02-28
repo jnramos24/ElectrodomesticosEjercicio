@@ -61,7 +61,7 @@ public class Televisor extends Electrodomestico {
         this.resolucion = resolucion;
         this.sintonizadorTDT = sintonizadorTDT;
     }
-    
+
     // ========== GET IS ==========
 
     /**
@@ -91,9 +91,9 @@ public class Televisor extends Electrodomestico {
     @Override
     public String toString() {
 
-        return String.format("%-18s %-7s %12s %5dkg %9d'' %6b €%d", "Televisor", getColor(), getConsumoElectrico(), getPeso(),
-                getResolucion(), isSintonizadorTDT(), precioFinal());
-       
+        return String.format("%-18s %-7s %12s %5dkg %9d'' %6b €%d", "Televisor", getColor(), getConsumoElectrico(),
+                getPeso(), getResolucion(), isSintonizadorTDT(), precioFinal());
+
     }
 
     // ========== METODO IMPLEMENTADO ==========

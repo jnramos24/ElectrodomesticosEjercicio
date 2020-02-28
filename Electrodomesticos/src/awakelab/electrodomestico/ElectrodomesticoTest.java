@@ -41,7 +41,7 @@ class ElectrodomesticoTest {
     void testGetConsumoElectrico() {
         assertEquals('F', electrodomestico.getConsumoElectrico());
     }
-    
+
     @Test
     void testComprobarConsumoEnergetico() {
         char c = 'g';
@@ -71,17 +71,17 @@ class ElectrodomesticoTest {
     @Test
     void testPrecioFinal() {
         Electrodomestico[] electrodomesticos = new Electrodomestico[3];
-        
+
         electrodomesticos[0] = new Electrodomestico();
         electrodomesticos[1] = new Electrodomestico(190, 80);
         electrodomesticos[2] = new Electrodomestico(180, 20, "ROJO", 'b');
-        
+
         int precioFinal = electrodomesticos[0].precioFinal();
         assertEquals(120, precioFinal);
-        
+
         precioFinal = electrodomesticos[1].precioFinal();
         assertEquals(300, precioFinal);
-        
+
         precioFinal = electrodomesticos[2].precioFinal();
         assertEquals(310, precioFinal);
     }
