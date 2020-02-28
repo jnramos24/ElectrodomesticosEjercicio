@@ -107,17 +107,13 @@ Electrodomestico
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>585</x>
-      <y>170</y>
-      <w>200</w>
-      <h>50</h>
+      <x>835</x>
+      <y>105</y>
+      <w>80</w>
+      <h>25</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Clase Ejecutable&gt;&gt;
-Main
---
-+static Electrodomestico[] crearLista()
-+static mostrarPreciosFinales(Electrodomestico[]): void
-+static mostrarElectrodomesticos(Electrodomestico[]): void</panel_attributes>
+Main</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -143,14 +139,41 @@ Main
     <additional_attributes>380.0;10.0;10.0;10.0;10.0;70.0</additional_attributes>
   </element>
   <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>575</x>
+      <y>95</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Clase Paquete&gt;&gt;
+UtilidadesMain
+--
++static Electrodomestico[] crearLista()
++static mostrarPreciosFinales(Electrodomestico[]): void
++static mostrarElectrodomesticos(Electrodomestico[]): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>Relation</id>
     <coordinates>
-      <x>505</x>
-      <y>185</y>
-      <w>90</w>
+      <x>770</x>
+      <y>110</y>
+      <w>75</w>
       <h>15</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>505</x>
+      <y>115</y>
+      <w>80</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
   </element>
 </diagram>

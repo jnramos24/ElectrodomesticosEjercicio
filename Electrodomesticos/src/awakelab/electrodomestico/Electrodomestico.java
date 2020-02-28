@@ -198,6 +198,9 @@ public class Electrodomestico{
      * @return la letra por defecto o la correctamente ingresada
      */
     private char comprobarConsumoEnergetico(char letra) {
+        String s = new String();
+        s = letra + "";
+        letra = s.toUpperCase().charAt(0);
         for (char c : CLASIFICACION_CONSUMO) {
             if (letra == c)
                 return letra;
@@ -213,7 +216,7 @@ public class Electrodomestico{
      */
     private String comprobarColor(String color) {
         for (String s : COLOR) {
-            if (s.equals(color))
+            if (s.equals(color.toUpperCase()))
                 return color;
         }
         return COLOR[0];
