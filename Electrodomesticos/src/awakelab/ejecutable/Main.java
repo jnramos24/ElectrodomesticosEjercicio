@@ -16,7 +16,6 @@
 package awakelab.ejecutable;
 
 import awakelab.electrodomestico.*;
-import awakelab.ejecutable.UtilidadesMain;
 
 /**
  * @author toballatorre
